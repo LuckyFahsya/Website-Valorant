@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypher - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4a648cdbcbbeef137050deefeaf6a1369c606666-616x822.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Cypher - Controller</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4a648cdbcbbeef137050deefeaf6a1369c606666-616x822.png" alt="Cypher" class="agent-image">
+        <p>Cypher adalah agen pengintai yang menggunakan perangkat untuk mengumpulkan informasi tentang musuh dan melindungi area dengan jebakan.</p>
+
+        <h2>Kemampuan Cypher</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('trapwire')"><strong>Trapwire:</strong> Pasang kabel yang dapat mendeteksi musuh dan memperlambat mereka saat terjebak.</li>
+            <li onclick="showVideo('cypher-cage')"><strong>Cyber Cage:</strong> Ciptakan area yang menghalangi pandangan musuh dan memberikan keuntungan strategis.</li>
+            <li onclick="showVideo('spycam')"><strong>Spycam:</strong> Pasang kamera yang dapat digunakan untuk memantau area dan memberikan informasi kepada tim.</li>
+            <li onclick="showVideo('ultimate')"><strong>Neural Theft:</strong> Ambil informasi dari tubuh musuh yang telah dikalahkan untuk melihat posisi musuh yang hidup.</li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk menampilkan video berdasarkan skill yang diklik
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            // Ganti URL video sesuai dengan skill yang dipilih
+            if (skill === 'trapwire') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/aab21b75eb43f0e8cc9c0b816cb4877ae868b9fd.mp4';
+            } else if (skill === 'cypher-cage') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/54a8dfaa9b82c7aaf994b0432bb25ef1e95c985c.mp4';
+            } else if (skill === 'spycam') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/825ba0643c74ad583350d1eb562bb7650ad78ae0.mp4';
+            } else if (skill === 'ultimate') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ddeaad5ff2e4865351755b71fdc4fc97339fb334.mp4';
+            }
+
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>

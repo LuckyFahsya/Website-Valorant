@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih - Komunitas Valorant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Terima Kasih!</h1>
+        <p>Terima kasih, <strong id="userName"></strong>! Pesan Anda telah kami terima.</p>
+        <p>Kami akan segera menghubungi Anda di alamat email: <strong id="userEmail"></strong>.</p>
+        <p>Berikut adalah pesan Anda:</p>
+        <blockquote id="userMessage"></blockquote>
+
+        <p><a href="index.html">Kembali ke Beranda</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Komunitas Valorant Indonesia. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Ambil parameter dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+    
+        // Masukkan nilai parameter ke dalam halaman
+        document.getElementById('userName').innerText = name;
+        document.getElementById('userEmail').innerText = email;
+    </script>
+</body>
+</html>

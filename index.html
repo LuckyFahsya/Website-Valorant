@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komunitas Pecinta Valorant</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan CSS untuk dropdown */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    nav ul li .dropdown-content a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+    }
+
+    nav ul li .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    nav ul li:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="events.html">Event Komunitas</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <!-- Dropdown untuk Agen Valorant -->
+        <li>
+          <a href="agents.html">Agen Valorant</a>
+          <div class="dropdown-content">
+            <a href="map.html">Map</a>
+            <a href="senjata.html">Senjata</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat Datang di Komunitas Games Valorant</h1>
+    <p>Bergabunglah bersama kami dan temukan teman baru untuk bermain Valorant!</p>
+  </section>
+
+  <!-- Section baru untuk mengunduh game -->
+  <section class="download-section">
+    <h2>Unduh Valorant Sekarang</h2>
+    <p>Valorant adalah game tembak-menembak taktis 5v5 dari Riot Games. Siap bermain? Unduh sekarang untuk memulai petualanganmu!</p>
+    <a href="https://playvalorant.com/en-us/download/" class="download-button" target="_blank">Unduh Valorant</a>
+  </section>
+
+  <section class="content">
+    <h2>Tentang Valorant</h2>
+    <p>Valorant adalah game tembak-menembak taktis 5v5 yang dirilis oleh Riot Games. Permainan ini memadukan elemen strategi dan kecepatan, dengan beragam agen yang memiliki kemampuan unik.</p>
+  </section>
+
+ <footer>
+<p>&copy; 2024 Komunitas Valorant Indonesia. All Rights Reserved.</p>
+ </footer>
+</body>
+</html>

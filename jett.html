@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jett - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/94d795777116652279c4de73ba19976639c12f5d-1920x1080.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Jett - Duelist</h1>
+        <img src="jett.jpg" alt="Jett" class="agent-image">
+        <p>Jett adalah agen yang sangat cepat dan lincah. Dengan kemampuan yang memungkinkan dia untuk bergerak cepat dan mengelak serangan musuh, Jett adalah salah satu Duelist paling ditakuti di Valorant.</p>
+
+        <h2>Kemampuan Jett</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('cloudburst')"><strong>Cloudburst:</strong> Lemparkan bola asap yang dapat menutupi pandangan musuh.</li>
+            <li onclick="showVideo('updraft')"><strong>Updraft:</strong> Terbang ke atas dengan kecepatan luar biasa.</li>
+            <li onclick="showVideo('tailwind')"><strong>Tailwind:</strong> Bergerak ke depan dengan kecepatan kilat.</li>
+            <li onclick="showVideo('bladestorm')"><strong>Blade Storm:</strong> Mengeluarkan pisau-pisau yang sangat akurat, mampu membunuh musuh hanya dengan satu lemparan ke kepala.</li>
+        </ul>
+
+        <!-- Bagian video -->
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk menampilkan video berdasarkan skill yang diklik
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            // Ganti URL video sesuai dengan skill yang dipilih
+            if (skill === 'cloudburst') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/3353597819f0c032d56ff947d9762368b4ee6c6b.mp4';
+            } else if (skill === 'updraft') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/4cbc968f05713579aae9464c5a16dc3f6863f943.mp4';
+            } else if (skill === 'tailwind') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ec6b3cf1f8ac09d597b0193de1d7bb81335b40e4.mp4';
+            } else if (skill === 'bladestorm') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/667770571300e065b332617e5c8f2e009ed88928.mp4';
+            }
+            
+            // Ganti src dari iframe untuk memutar video yang sesuai
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+
+</body>
+</html>

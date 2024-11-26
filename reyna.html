@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyna - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse4.mm.bing.net/th?id=OIP.lxY-wqqZQDWsvUK-mYns4AHaD_&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Reyna - Duelist</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/7cb513c9b3eae3286449776e85753138436d553c-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Jett" class="agent-image">
+        <p>Reyna adalah agen yang mendominasi permainan dengan kekuatannya yang mengambil jiwa musuh. Semakin banyak musuh yang dikalahkan, semakin kuat Reyna. Dia adalah ancaman utama dalam duel 1v1.</p>
+
+        <h2>Kemampuan Reyna</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('leer')"><strong>Leer:</strong> Lemparkan bola energi yang membuat penglihatan musuh kabur ketika melihat ke arah bola.</li>
+            <li onclick="showVideo('devour')"><strong>Devour:</strong> Ambil jiwa musuh yang telah mati untuk menyembuhkan diri.</li>
+            <li onclick="showVideo('dismiss')"><strong>Dismiss:</strong> Gunakan jiwa musuh yang telah mati untuk menghilang sejenak dari pandangan.</li>
+            <li onclick="showVideo('empress')"><strong>Empress:</strong> Masuk ke mode kekuatan super, di mana Reyna bisa membunuh lebih cepat dan menyembuhkan secara otomatis dari jiwa musuh yang dikalahkan.</li>
+        </ul>
+
+        <!-- Bagian video -->
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk menampilkan video berdasarkan skill yang diklik
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            // Ganti URL video sesuai dengan skill yang dipilih
+            if (skill === 'leer') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/01030fba2df618b91c6185bb076f54e8c6c40415.mp4';
+            } else if (skill === 'devour') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/327ccef09ef3c84a92320593c5db1bcb4b37e1e7.mp4';
+            } else if (skill === 'dismiss') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/6a7db5a37dd8e6e6671699ff30ad297cf1f2eeda.mp4';
+            } else if (skill === 'empress') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/d777e81e035db1430b1fbf664a432163deed5afb.mp4';
+            }
+            
+            // Ganti src dari iframe untuk memutar video yang sesuai
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+
+</body>
+</html>

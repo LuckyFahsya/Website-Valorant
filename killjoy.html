@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killjoy - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse2.mm.bing.net/th?id=OIP.Gz9upAnwccIQF5WF9YM8gQHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Killjoy - Sentinel</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/820d36d431fff77b1e1ece39ad6f007746bd31f6-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Killjoy" class="agent-image">
+        <p>Killjoy adalah agen yang menggunakan teknologi untuk mengendalikan area dan memberikan informasi kepada tim, dengan kemampuan untuk menempatkan perangkat yang mengganggu musuh.</p>
+
+        <h2>Kemampuan Killjoy</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('nanoswarm')"><strong>Nanoswarm:</strong> Menempatkan perangkat yang meledak dan memberikan kerusakan kepada musuh yang berada di dekatnya.</li>
+            <li onclick="showVideo('alarmbot')"><strong>Alarmbot:</strong> Menggunakan robot untuk mendeteksi musuh dan memberikan kerusakan saat mendekat.</li>
+            <li onclick="showVideo('turret')"><strong>Turret:</strong> Menempatkan turret yang secara otomatis menembaki musuh di area sekitarnya.</li>
+            <li onclick="showVideo('ultimate')"><strong>Ultimate:</strong> Menggunakan kemampuan untuk mengendalikan area dengan perangkat yang memberikan informasi dan kerusakan.</li>
+        </ul ```html
+        div class="video-container" id="videoContainer" style="display:none;">
+            <iframe id="skillVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        function showVideo(skill) {
+            const videoContainer = document.getElementById('videoContainer');
+            const skillVideo = document.getElementById('skillVideo');
+            if (skill === 'nanoswarm') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/b47a0b24d2499935d28f845a067984a52dbc2542.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'alarmbot') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/0582e7e1a0733667614492129abef67e17cfc92c.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'turret') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/007e5042385d6f7315f4b4cb3fbd3b2c71b530c1.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'ultimate') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/9485f7bbf04841f4c37e031f07dad03e9cbc1bf9.mp4'; // Ganti dengan link video yang sesuai
+            }
+            videoContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

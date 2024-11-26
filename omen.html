@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omen - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse3.mm.bing.net/th?id=OIP.Mhuh-bZPGCB-p2igoltqxgHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Omen - Controller</h1>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.Mhuh-bZPGCB-p2igoltqxgHaEK&pid=Api&P=0&h=180" alt="Omen" class="agent-image">
+        <p>Omen adalah agen yang misterius dan mampu mengendalikan bayangan, memberikan keuntungan strategis dengan teleportasi dan kemampuan mengganggu musuh.</p>
+
+        <h2>Kemampuan Omen</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('shroudedStep')"><strong>Shrouded Step:</strong> Teleportasi ke lokasi yang ditentukan dalam jarak pendek.</li>
+            <li onclick="showVideo('paranoia')"><strong>Paranoia:</strong> Mengirimkan bayangan yang mengurangi visi musuh di jalurnya.</li>
+            <li onclick="showVideo('darkCover')"><strong>Dark Cover:</strong> Menempatkan bola asap yang dapat dipindahkan untuk menutupi area.</li>
+            <li onclick="showVideo('ultimate')"><strong>From the Shadows:</strong> Teleportasi ke lokasi lain di peta, dengan kemampuan untuk kembali jika terdeteksi oleh musuh.</li>
+        </ul>
+
+        <div class="video-container" id="videoContainer" style="display:none;">
+            <iframe id="skillVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        function showVideo(skill) {
+            const videoContainer = document.getElementById('videoContainer');
+            const skillVideo = document.getElementById('skillVideo');
+            if (skill === 'shroudedStep') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/33550fee410c5a55ea8832f41827a12aaddb686f.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'paranoia') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/f401fc788f3182b6d5aa25af6056c842117b1b36.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'darkCover') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ba0b035a5ff2bb8d9487ba461b3d15900ff50f6b.mp4'; // Ganti dengan link video yang sesuai
+            } else if (skill === 'ultimate') {
+                skillVideo.src = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/252cf8ad86b6aca6210ba93ea856f52708476eba.mp4'; // Ganti dengan link video yang sesuai
+            }
+            videoContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

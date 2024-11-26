@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Komunitas - Valorant Community</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahan CSS untuk dropdown */
+        nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+        }
+    
+        nav ul li {
+          position: relative;
+          margin-right: 20px;
+        }
+    
+        nav ul li a {
+          text-decoration: none;
+          color: #fff;
+          padding: 10px 15px;
+          display: block;
+        }
+    
+        nav ul li .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #222;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          border-radius: 5px;
+        }
+    
+        nav ul li .dropdown-content a {
+          padding: 10px 15px;
+          text-decoration: none;
+          color: #fff;
+          display: block;
+        }
+    
+        nav ul li .dropdown-content a:hover {
+          background-color: #333;
+        }
+    
+        nav ul li:hover .dropdown-content {
+          display: block;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="events.html">Event Komunitas</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <!-- Dropdown untuk Agen Valorant -->
+            <li>
+              <a href="agents.html">Agen Valorant</a>
+              <div class="dropdown-content">
+                <a href="map.html">Map</a>
+                <a href="senjata.html">Senjata</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+</head>
+<body>
+    <header>
+        <h1>Event Komunitas</h1>
+        <p>Temukan dan ikuti acara menarik bersama komunitas Valorant kami!</p>
+        
+    </header>
+    <section class="event-container">
+        <!-- Event 1 -->
+        <div class="event-card">
+            <h2>Turnamen Valorant Community Cup 2024</h2>
+            <p><strong>Tanggal:</strong> 15 - 17 Desember 2024</p>
+            <p><strong>Deskripsi:</strong> Turnamen tahunan komunitas dengan total hadiah Rp10 juta! Daftar sekarang dan buktikan tim Anda yang terbaik.</p>
+            <a href="daftar.html" class="btn">Daftar Sekarang</a>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+            <h2>Valorant Community Meetup</h2>
+            <p><strong>Tanggal:</strong> 22 November 2024</p>
+            <p ><strong>Deskripsi:</strong> Bergabung dalam sesi diskusi strategi bersama pro player dan sesi mabar eksklusif.</p>
+            <a href="meetup-details.html" class="btn">Lihat Detail</a>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+            <h2>Fan Art Competition</h2>
+            <p><strong>Tanggal Batas Pengumpulan:</strong> 30 November 2024</p>
+            <p><strong>Deskripsi:</strong> Tunjukkan kreativitas Anda dengan membuat fan art agent Valorant favoritmu. Pemenang akan mendapatkan merchandise eksklusif.</p>
+            <a href="fanart.html" class="btn">Ikuti Kompetisi</a>
+        </div>
+    </section>
+
+    <h3 style="text-align: center;">Countdown Timer untuk Event Mendatang</h3>
+    <div class="countdown" id="countdown"></div>    
+
+    <h3 style="text-align: center;">Galeri Foto Acara Sebelumnya</h3>
+    <div class="gallery">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.M_KcU2lnC0WApjWOexgP8gHaEW&pid=Api&P=0&h=180" alt="Event 1">
+        <img src="https://cdn.discordapp.com/attachments/778560966631751710/1220739730115923978/Watch_Party_Masters_Madrid_2024_-_opsi_1-01.png?ex=6743dfb7&is=67428e37&hm=81d086bdbabb2b039abe6d36a24da7e06892af0dee94285770c2f918819b85a7&" alt="Event 2">
+        <img src="https://images-ext-1.discordapp.net/external/z8VMc4mMR84JpU44HEMDkXdNZ3TKFtQNztSwyrE9K_I/https/lh5.googleusercontent.com/p/AF1QipMtonhRi34VjKaMMlqcmqwuXro2FK3Jy8j8h9Q4%3Dw900-h900-k-no-p?format=webp&width=662&height=662" alt="Event 3">
+        <img src="https://cdn.discordapp.com/attachments/778560966631751710/1145144662160584776/VALORANT_Champions_Tour_2023_Winner-01.png?ex=6743bd13&is=67426b93&hm=5637a873ba39a15df6068343f5008543248ff1b21e8fda905c068b9949804e87&" alt="Event 4">
+    </div>
+
+   
+
+    <footer>
+        <p>© 2024 Valorant Community Indonesia</p>
+    </footer>
+
+    <script>
+        // Countdown timer script
+        const eventDate = new Date("December 15, 2024 00:00:00 ").getTime();
+        const countdownElement = document.getElementById("countdown");
+
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                countdownElement.innerHTML = "Event telah dimulai!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
